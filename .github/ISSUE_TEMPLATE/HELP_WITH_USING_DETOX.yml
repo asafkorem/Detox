@@ -15,7 +15,7 @@ body:
       required: true
   - type: markdown
     attributes:
-      value: "## What is your project environment?"
+      value: "\n---\n## What is your project environment?"
   - type: input
     id: detox-version
     attributes:

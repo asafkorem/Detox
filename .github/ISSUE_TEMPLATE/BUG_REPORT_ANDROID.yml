@@ -47,7 +47,7 @@ body:
       required: true
   - type: markdown
     attributes:
-      value: "## In what environment did this happen?"
+      value: "\n---\n## In what environment did this happen?"
   - type: input
     id: detox-version
     attributes:
