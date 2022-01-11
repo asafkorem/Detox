@@ -1,4 +1,4 @@
-name: Bug Report - iOS
+name: "Bug Report - iOS"
 description: Create a report to help us improve Detox on iOS
 title: "[BUG] "
 labels: ["type: triage/bug", "z_platform: ios"]
@@ -42,8 +42,8 @@ body:
     id: reproduction
     attributes:
       label: Help us reproduce this issue!
-      description: Provide the steps necessary to reproduce the issue. If you are seeing a regression, try to provide the last known version where the issue did not reproduce.\n\n
-      In case of a vague bug or a crash, please create an example project that reproduces it by forking the ready-to-go [DetoxTemplate project](https://github.com/wix-incubator/DetoxTemplate) and applying the minimal changes required for it to reproduce (e.g. add 3rd party libraries / E2E tests).\nFor complete information, please review the guidelines there.
+      description: "Provide the steps necessary to reproduce the issue. If you are seeing a regression, try to provide the last known version where the issue did not reproduce.\n\n
+      In case of a vague bug or a crash, please create an example project that reproduces it by forking the ready-to-go [DetoxTemplate project](https://github.com/wix-incubator/DetoxTemplate) and applying the minimal changes required for it to reproduce (e.g. add 3rd party libraries / E2E tests).\nFor complete information, please review the guidelines there."
     validations:
       required: true
   - type: markdown
@@ -90,23 +90,23 @@ body:
     attributes:
       label: Detox logs
       description: Please run your tests using the `--loglevel trace` argument. See [artifacts documentation](https://wix.github.io/Detox/docs/api/artifacts).
-      value: <details>
+      value: "<details>
       <summary>Detox logs</summary>
       <code>
       (paste logs here!)
       </code>
-      </details>
+      </details>"
   - type: textarea
     id: device-logs
     attributes:
       label: Device logs
       description: Please run your tests using the `--record-logs all` argument. See [artifacts documentation](https://wix.github.io/Detox/docs/api/artifacts).
-      value: <details>
+      value: "<details>
       <summary>Device logs</summary>
       <code>
       (paste logs here!)
       </code>
-      </details>
+      </details>"
   - type: textarea
     id: test-artifacts
     attributes:
