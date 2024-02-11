@@ -66,8 +66,10 @@ class AnimationsComponent extends Component {
   renderAfterAnimTextIfNeeded() {
     if (this.state.showAfterAnimationText) {
       return (
-        <View testID='UniqueId_AnimationsScreen_afterAnimationText' style={{ marginTop: 20 }}>
-          <Text>After-animation-text</Text>
+        <View style={{ marginTop: 20 }}>
+          <Text testID='UniqueId_AnimationsScreen_afterAnimationText'>
+            After-animation-text
+          </Text>
         </View>
       );
     }

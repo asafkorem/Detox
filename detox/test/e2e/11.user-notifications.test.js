@@ -11,7 +11,7 @@ describe(':ios: User Notifications', () => {
     await expect(element(by.text('From push'))).toBeVisible();
   });
 
-  xit('Init from calendar notification', async () => {
+  it('Init from calendar notification', async () => {
     await device.launchApp({newInstance: true, userNotification: userNotificationCalendarTrigger});
     await expect(element(by.text('From calendar'))).toBeVisible();
   });
@@ -23,7 +23,7 @@ describe(':ios: User Notifications', () => {
     await expect(element(by.text('From push'))).toBeVisible();
   });
 
-  xit('Background calendar notification', async () => {
+  it('Background calendar notification', async () => {
     await device.launchApp({newInstance: true});
     await device.sendToHome();
     await device.launchApp({newInstance: false, userNotification: userNotificationCalendarTrigger});
@@ -36,7 +36,7 @@ describe(':ios: User Notifications', () => {
     await expect(element(by.text('From push'))).toBeVisible();
   });
 
-  xit('Foreground calendar notifications', async () => {
+  it('Foreground calendar notifications', async () => {
     await device.launchApp({newInstance: true});
     await device.sendUserNotification(userNotificationCalendarTrigger);
     await expect(element(by.text('From calendar'))).toBeVisible();

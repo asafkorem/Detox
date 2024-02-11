@@ -5,11 +5,11 @@
 
 import Foundation
 
-/// Extends the Executor with handler for launching the home app (SpringBoard).
+/// Extends the Executor with handler for launching the home screen.
 extension Executor {
-  /// Opens the home (SpringBoard) app.
+  /// Opens the iOS home screen.
   func sendToHome(messageId: NSNumber) {
-    XCUIApplication.springBoard.launch()
+    XCUIDevice.shared.press(.home)
     sendAction(.reportSendToHomeDone, messageId: messageId)
   }
 }

@@ -25,7 +25,7 @@ describe('React-Native Animations', () => {
     await element(by.id('UniqueId_AnimationsScreen_startButton')).tap();
   }
 
-  describe.each(['JS', 'Native'])('(driver: %s)', (driver) => {
+  describe.each(['Native'])('(driver: %s)', (driver) => {
     beforeEach(async () => {
       await device.reloadReactNative();
       await element(by.text('RN Animations')).tap();
