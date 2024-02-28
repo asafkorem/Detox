@@ -63,6 +63,12 @@ func expectLog(_ message: String, type: OSLogType = .info) {
   detoxLog(message: message, container: .expect, type: type)
 }
 
+/// Logs the given `message` with its `type`, under the tester optimizations container.
+func optimizationLog(_ message: String, type: OSLogType = .info) {
+  detoxLog(message: message, container: .optimization, type: type)
+}
+
+
 /// Logs the `message` under a DetoxTester `container` along with its `type`.
 fileprivate func detoxLog(message: String, container: OSLog, type: OSLogType) {
   // TODO: reduce logs amount.
@@ -107,4 +113,16 @@ fileprivate extension OSLog {
 
   /// Logs operations related to the tester's expectations.
   static let expect = OSLog(subsystem: subsystem, category: "Expectations")
+
+  /// Logs operations related to the tester's optimizations.
+  static let optimization = OSLog(subsystem: subsystem, category: "Optimizations")
+}
+
+// MARK: - Objective-C compatibility
+
+/// A set of Objective-C compatible methods for logging operations.
+class LogUtils: NSObject {
+  @objc static func log_optimizations(_ message: String, type: OSLogType) {
+    optimizationLog(message, type: type)
+  }
 }
